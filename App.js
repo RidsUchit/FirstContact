@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { TouchableOpacity, View, Text, 
-  TextInput, Button,StyleSheet,Image } 
+import {
+  TouchableOpacity, View, Text,
+  TextInput, Button, StyleSheet, Image
+}
   from 'react-native';
 //import { createAppContainer } from 'react-navigation';
 
@@ -35,16 +37,7 @@ const App = () => {
           screenOptions={({ route }) => ({
             tabBarActiveTintColor: 'tomato',
             tabBarInactiveTintColor: 'grey',
-            headerLeft: () => (
-              <TouchableOpacity /* onPress={() => navigation.goBack()} */>
-                <AntDesign name="leftcircleo" size={30} color="#5A5A5A" style={{ paddingLeft: 10 }} />
-              </TouchableOpacity>
-            ),
-            headerRight: () => (
-              <TouchableOpacity >
-                <Ionicons name="ios-notifications-outline" size={30} color="#5A5A5A" style={{ paddingRight: 10 }} />
-              </TouchableOpacity>
-            ),
+
             tabBarIcon: ({ focused, color, size }) => {
               let iconName;
 
@@ -60,13 +53,41 @@ const App = () => {
               <Ionicons name="" size={24} color="black" />
               return <Ionicons name={iconName} size={size} color={color} />;
             },
-          })  } >
-        
-          <Tab.Screen name="Home" component={HomeScreen}  
-          options={{ title: 'Dashboard'}} />
-        
-          <Tab.Screen name="Profile" component={ProfileScreen} />
-          <Tab.Screen name="Settings" component={SettingScreen} />
+          })} >
+
+          <Tab.Screen name="Home" component={HomeScreen}
+            options={{ title: 'Dashboard',
+            headerRight: () => (
+              <TouchableOpacity >
+                <Ionicons name="ios-notifications-outline" size={30} color="#5A5A5A" style={{ paddingRight: 10 }} />
+              </TouchableOpacity>
+            )
+          }} />
+
+          <Tab.Screen name="Profile" component={ProfileScreen} options={{
+            headerLeft: () => (
+              <TouchableOpacity /* onPress={() => navigation.goBack()} */  >
+                <AntDesign name="leftcircleo" size={30} color="#5A5A5A" style={{ paddingLeft: 10 }} />
+              </TouchableOpacity>
+            ),
+            headerRight: () => (
+              <TouchableOpacity >
+                <Ionicons name="ios-notifications-outline" size={30} color="#5A5A5A" style={{ paddingRight: 10 }} />
+              </TouchableOpacity>
+            )
+          }} />
+          <Tab.Screen name="Settings" component={SettingScreen}options={{
+            headerLeft: () => (
+              <TouchableOpacity /* onPress={() => navigation.goBack()}  */ >
+                <AntDesign name="leftcircleo" size={30} color="#5A5A5A" style={{ paddingLeft: 10 }} />
+              </TouchableOpacity>
+            ),
+            headerRight: () => (
+              <TouchableOpacity >
+                <Ionicons name="ios-notifications-outline" size={30} color="#5A5A5A" style={{ paddingRight: 10 }} />
+              </TouchableOpacity>
+            )
+          }}  />
 
         </Tab.Navigator>
       </NavigationContainer>
@@ -85,12 +106,12 @@ const App = () => {
         <TextInput secureTextEntry style={styles.inputText} placeholder="Password" placeholderTextColor="#003f5c" onChangeText={(text) => setPassword(text)} />
       </View>
       <TouchableOpacity style={styles.loginBtn} onPress={handleLogin} >
-        {/* onPress={() => navigation.navigate('HomeScreen')} */} 
+        {/* onPress={() => navigation.navigate('HomeScreen')} */}
         <Text style={styles.loginText}>LOGIN</Text>
       </TouchableOpacity>
 
-    </View>  
- 
+    </View>
+
   );
 }
 
@@ -102,11 +123,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   logo: {
-    width:400,
-    height:100,
-    resizeMode:'center',
-    backgroundColor:'#153455',
-    marginBottom:50,
+    width: 400,
+    height: 100,
+    resizeMode: 'center',
+    backgroundColor: '#153455',
+    marginBottom: 50,
   },
   inputView: {
     width: '80%',
@@ -120,8 +141,8 @@ const styles = StyleSheet.create({
   inputText: {
     height: 50,
     color: 'black',
-    borderColor:"#333333",
-     
+    borderColor: "#333333",
+
   },
   loginBtn: {
     width: '80%',
