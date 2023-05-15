@@ -7,11 +7,11 @@ const ProfileScreen = () => {
             <Image
                 style={styles.avatar}
                 source={{
-                    uri: 'https://via.placeholder.com/150',
+                    uri: 'https://media.licdn.com/dms/image/D5603AQHMN0y1jQBVNA/profile-displayphoto-shrink_800_800/0/1674974357535?e=2147483647&v=beta&t=-Ept6_kA8_m1qAvl-H_tov0fXiqDHQFw4kvLPY6bjg4',
                 }}
             />
-            <Text style={styles.name}>John Doe</Text>
-            <Text style={styles.email}>johndoe@example.com</Text>
+            <Text style={styles.name}>John Ortner</Text>
+            <Text style={styles.email}>john@firstcontact.co</Text>
             <View style={styles.statsContainer}>
                 <View style={styles.stat}>
                     <Text style={styles.statTitle}>Followers</Text>

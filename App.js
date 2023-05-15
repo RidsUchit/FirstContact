@@ -7,7 +7,7 @@ import {
 //import { createAppContainer } from 'react-navigation';
 
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from 'react-navigation-stack';
+//import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { AntDesign, Ionicons } from '@expo/vector-icons';

@@ -3,32 +3,35 @@ import { StyleSheet, View, FlatList, Image, Text, TouchableOpacity } from 'react
 import { AntDesign,FontAwesome } from '@expo/vector-icons';
 
 const data = [
-    {
-      id: '1',
-      username: 'john_doe',
-      imageSource: require('../../assets/people1.png'),
-      caption: 'This is an amazing photo!',
-      likes: 1243,
-      comments: 42,
+  {
+    id: '1',
+    username: 'John Ortner',
+    imageSource: require('../../assets/11.jpg'),
+    caption: 'Mothers Day Giveaway At Grosvenor Place',
+    likes: 12,
+    comments: 22,
+    avatar: require('../../assets/john.jpg')
+  },
+  {
+    id: '2',
+    username: 'Barbara Kundig',
+    imageSource: require('../../assets/12.jpg'),
+    caption: 'May 2023 V5 FC Community Newsletter',
+    likes: 102,
+    comments: 78,
+    avatar: require('../../assets/bk.png')
+  },
+  {
+      id: '3',
+      username: 'Steven Cooke',
+      imageSource: require('../../assets/eom.png'),
+      caption: 'Employee of the Month - March 2023',
+      likes: 88,
+      comments: 45,
+      avatar: require('../../assets/steven.png')
     },
-    {
-      id: '2',
-      username: 'jane_smith',
-      imageSource: require('../../assets/people2.png'),
-      caption: 'Sunset vibes',
-      likes: 532,
-      comments: 18,
-    },
-    {
-        id: '3',
-        username: 'Rushin',
-        imageSource: require('../../assets/people3.png'),
-        caption: 'Mountain Diaries',
-        likes: 888,
-        comments: 45,
-      },
-    // Add more post objects here
-  ];
+  // Add more post objects here
+];
 
 const Feed = () => {
   const renderPost = ({ item }) => {

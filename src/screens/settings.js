@@ -4,7 +4,7 @@ import React from 'react'
 const SettingScreen = () => {
   return (
     <View style={ {flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Text>settings</Text>
+    <Text>Coming Soon !!</Text>
     </View>
   )
 }

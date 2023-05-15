@@ -43,6 +43,7 @@
       headerLeft: () => (
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <AntDesign name="leftcircleo" size={30} color="#5A5A5A" style={{ paddingLeft: 10 }} />
+ 
         </TouchableOpacity>
       ),
       headerRight: () => (
