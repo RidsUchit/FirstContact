@@ -39,7 +39,7 @@ const Feed = () => {
       <View style={styles.postContainer}>
         <View style={styles.postHeader}>
           <Image
-            source={require('../../assets/avatar.png')}
+            source={item.avatar}
             style={styles.avatar}
           />
           <Text style={styles.username}>{item.username}</Text>
